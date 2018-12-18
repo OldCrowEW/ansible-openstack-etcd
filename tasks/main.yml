@@ -1,0 +1,21 @@
+---
+# tasks file for ansible-openstack-etcd
+- name: Install OpenStack etcd pkg
+  yum:
+    name: etcd
+    state: present
+
+- name: Copy etcd configuration in place
+  template:
+    src: etcd-conf.j2
+    dest: /etc/etcd/etcd.conf
+  notify: restart etcd
+
+# Restart if the config has been updated
+- meta: flush_handlers
+
+- name: Ensure etcd is started and enabled
+  service:
+    name: etcd
+    state: started
+    enabled: true
