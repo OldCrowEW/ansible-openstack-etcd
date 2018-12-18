@@ -1,6 +1,6 @@
 # Role Name
 
-[![Build Status](https://travis-ci.org/OldCrowEW/ansible-openstack-ETCD.svg?branch=master)](https://travis-ci.org/OldCrowEW/ansible-openstack-ETCD)
+[![Build Status](https://travis-ci.org/OldCrowEW/ansible-openstack-etcd.svg?branch=master)](https://travis-ci.org/OldCrowEW/ansible-openstack-etcd)
 
 Ansible role to install and configure etcd for OpenStack. This follows the install guide for better or worse :D
 
